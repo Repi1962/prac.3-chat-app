@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+/*ESPAÑOL
+/* Colores Texto principal Violeta pálido 
+(subtítulo en la parte superior de la interfaz de usuario de la aplicación):
+ hsl (276, 100 %, 81 %) Moderado Violeta (chat a la izquierda): 
+ hsl(276, 55%, 52%) 
+ Violeta oscuro desaturado (chat a la derecha): hsl(271, 15%, 43%)
+  Azul grisáceo (texto de marcador de posición): hsl(206, 6 %, 79 %) 
+  Violeta desaturado muy oscuro (título principal): hsl(271, 36 %, 24 %) 
+  Violeta grisáceo oscuro (párrafo): hsl(270, 7 %, 64 %) 
+  Gradientes Estos dos colores son los colores de fondo vibrantes ve 
+  en todo el diseño y se aplican como un d
+  egradado lineal: Magenta claro: hsl (293, 100 %, 63 %)
+   Violeta claro: hsl (264, 100 %, 61 %)
+    Blanco secundario: hsl (0, 0 %, 100 %) 
+   Violeta grisáceo claro (fondo de la aplicación): hsl (270, 20 %, 96 %)
+    Violeta desaturado muy oscuro (fondo del botón enviar): hsl (271, 36 %, 24 %) 
+    Magenta muy claro (contorno del botón de opción): hsl (289, 100%, 72%)
+     Tipografía Copia del cuerpo Tamaño de fuente: 16px Familia de 
+     fuentes: Rubik Peso  400, 500, 700
+
+     font-family: 'Rubik', sans-serif;*/
+
+:root {
+  --subtitulo-top: hsl(276, 100%, 81%);
+  --chat-left: hsl(276, 55%, 52%);
+  --chat-right: hsl(271, 15%, 43%);
+  --text-position: hsl(206, 6%, 79%);
+  --title-major: hsl(271, 36%, 24%);
+  --párrafo: hsl(270, 7%, 64%);
+  /*Gradiantes*/
+  --degradado-lineal-Magenta-claro: hsl(293, 100%, 63%);
+  --degradado-lineal-Violeta-claro: hsl(264, 100%, 61%);
+  /*Resto*/
+  --white-second: hsl(0, 0%, 100%);
+  --bg-App: hsl(270, 20%, 96%);
+  --bg-bottom-summit: hsl(271, 36%, 24%);
+  --border-bottom-option: hsl(289, 100%, 72%);
+}
+
+body {
+  margin: 0;
+  background-color: rgb(139, 154, 139);
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5rem;
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: var(--bg-App);
+  overflow: hidden;
+}
+.radiant-bottom,
+.radiant-top {
+  position: absolute;
+  width: 600px;
+  height: 850px;
+  background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+.radiant-top {
+  top: 0;
+  left: -5.2em;
+  border-bottom-left-radius: 25rem;
+  border-bottom-right-radius: 25rem;
+}
+
+.radiant-bottom {
+  right: -6rem;
+  bottom: 0;
+  border-top-left-radius: 25em;
+  border-top-right-radius: 25em;
+  opacity: 0.05;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  top: 325px;
+  left: 450px;
+  bottom: 300px;
+}
+
+.header {
+  position: relative;
+  width: 525px;
+  height: 400px;
+  padding-right: 2rem;
+}
+
+.header__title {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  color: var(--title-major);
+}
+
+.header__text {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  color: var(--párrafo);
+}
+
+.mobil {
+  position: relative;
+  width: 325px;
+  height: 600px;
+  font-size: 0.65rem;
+  background-color: var(--bg-App);
+  border: 0.7rem solid var(--white-second);
+  border-radius: 2.5rem;
+}
+
+.mobil-header {
+  position: relative;
+  height: 85px;
+
+  background-image: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  padding: 1.7rem 1.3rem;
+}
+
+.camera {
+  position: absolute;
+  width: 200px;
+  height: 2rem;
+  top: -0.7rem;
+  margin-left: 2.3rem;
+  background-color: var(--white-second);
+  border-radius: 1rem;
+}
+
+.user {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white-second);
+}
+
+.user__atras {
+  font-size: 1.5rem;
+  color: var(--white-second);
+  text-decoration: none;
+}
+
+.user__avatar {
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--white-second);
+  border-radius: 50%;
+}
+
+.info {
+  line-height: 1.3rem;
+}
+
+.info__name,
+.info__status {
+  margin: 0;
+  padding: 0;
+}
+
+.info__name {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.info__status {
+  opacity: 0.6;
+}
+
+.mobil-main {
+  position: relative;
+  width: 100%;
+
+  padding: 0 0.6rem;
+}
+
+.comment {
+  width: 150px;
+  line-height: 0.9rem;
+  margin-bottom: 0.8rem;
+  background-color: hsl(0, 0%, 92%);
+  border-radius: 1rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.images-dogs__mobil {
+  margin: 0;
+  text-align: end;
+}
+
+.image--dogs {
+  width: 15%;
+  margin-left: 0.6rem;
+  border-radius: 0.5rem;
+}
+
+.comment-client {
+  margin-left: auto;
+}
+.client--primary {
+  margin-top: 0;
+}
+
+.comment--samuel-last {
+  width: 160px;
+}
+
+.prices-container {
+  color: var(--white-second);
+  margin-bottom: 1rem;
+}
+
+.prices {
+  position: relative;
+  display: inline-block;
+  width: 190px;
+  margin: 0.2rem 0;
+  background-image: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  border-radius: 0.6rem;
+  border-bottom-left-radius: 0.3rem;
+  padding: 0.2rem;
+}
+.icon-circle {
+  width: 6%;
+  margin: 0.5rem;
+}
+
+.number {
+  margin-left: 2.5rem;
+  font-size: 1.2rem;
+}
+
+.number-2 {
+  margin-left: 3.5rem;
+}
+
+.icon-circle,
+.price__text,
+.number {
+  vertical-align: middle;
+}
+
+.form {
+  display: inline-block;
+  width: 280px;
+}
+
+.form__textarea {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  resize: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.button {
+  position: absolute;
+  display: inline-block;
+  font-size: 1.1rem;
+  color:var(--white-second);
+  bottom: 0.9rem;
+  right: 1.1rem;
+  background-color: var(--title-major);
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 50%;
+}
